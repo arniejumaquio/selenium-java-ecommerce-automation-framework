@@ -1,0 +1,13 @@
+[
+
+  {
+    "testCaseId": "TC-0001",
+    "title": "Validate successful logout with valid credentials",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedUrl": "https://www.saucedemo.com/"
+  }
+
+
+]

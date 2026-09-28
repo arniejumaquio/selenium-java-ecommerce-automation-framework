@@ -1,0 +1,344 @@
+[
+
+  {
+    "testCaseId": "TC-0001",
+    "title": "Validate product display correct information",
+    "variation": "Sauce Labs Backpack",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductName": "Sauce Labs Backpack",
+    "expectedProductDescription": "carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection.",
+    "expectedPrice": "$29.99"
+  },
+
+  {
+    "testCaseId": "TC-0001",
+    "title": "Validate product display correct information",
+    "variation": "Sauce Labs Bike Light",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductName": "Sauce Labs Bike Light",
+    "expectedProductDescription": "A red light isn't the desired state in testing but it sure helps when riding your bike at night. Water-resistant with 3 lighting modes, 1 AAA battery included.",
+    "expectedPrice": "$9.99"
+  },
+
+
+  {
+    "testCaseId": "TC-0001",
+    "title": "Validate product display correct information",
+    "variation": "Sauce Labs Bolt T-Shirt",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductName": "Sauce Labs Bolt T-Shirt",
+    "expectedProductDescription": "Get your testing superhero on with the Sauce Labs bolt T-shirt. From American Apparel, 100% ringspun combed cotton, heather gray with red bolt.",
+    "expectedPrice": "$15.99"
+  },
+
+  {
+    "testCaseId": "TC-0001",
+    "title": "Validate product display correct information",
+    "variation": "Sauce Labs Fleece Jacket",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductName": "Sauce Labs Fleece Jacket",
+    "expectedProductDescription": "It's not every day that you come across a midweight quarter-zip fleece jacket capable of handling everything from a relaxing day outdoors to a busy day at the office.",
+    "expectedPrice": "$49.99"
+  },
+
+  {
+    "testCaseId": "TC-0001",
+    "title": "Validate product display correct information",
+    "variation": "Sauce Labs Onesie",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductName": "Sauce Labs Onesie",
+    "expectedProductDescription": "Rib snap infant onesie for the junior automation engineer in development. Reinforced 3-snap bottom closure, two-needle hemmed sleeved and bottom won't unravel.",
+    "expectedPrice": "$7.99"
+  },
+
+  {
+    "testCaseId": "TC-0001",
+    "title": "Validate product display correct information",
+    "variation": "Test.allTheThings() T-Shirt (Red)",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductName": "Test.allTheThings() T-Shirt (Red)",
+    "expectedProductDescription": "This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton.",
+    "expectedPrice": "$15.99"
+  },
+
+  {
+    "testCaseId": "TC-0002",
+    "title": "Validate default product order is name A to Z",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}"
+  },
+
+
+  {
+    "testCaseId": "TC-0003",
+    "title": "Validate products can be sorted by name from A to Z",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "sort": "Name (A to Z)"
+  },
+
+  {
+    "testCaseId": "TC-0004",
+    "title": "Validate products can be sorted by name from Z to A",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "sort": "Name (Z to A)"
+  },
+
+
+  {
+    "testCaseId": "TC-0005",
+    "title": "Validate products can be sorted by price from low to high",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "sort": "Price (low to high)"
+  },
+
+  {
+    "testCaseId": "TC-0006",
+    "title": "Validate products can be sorted by price from high to low",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "sort": "Price (high to low)"
+  },
+
+  {
+    "testCaseId": "TC-0007",
+    "title": "Validate product details page opens when a product name is selected",
+    "variation": "Sauce Labs Backpack",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductName": "Sauce Labs Backpack"
+  },
+
+  {
+    "testCaseId": "TC-0007",
+    "title": "Validate product details page opens when a product name is selected",
+    "variation": "Sauce Labs Bike Light",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductName": "Sauce Labs Bike Light"
+  },
+
+  {
+    "testCaseId": "TC-0007",
+    "title": "Validate product details page opens when a product name is selected",
+    "variation": "Sauce Labs Bolt T-Shirt",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductName": "Sauce Labs Bolt T-Shirt"
+  },
+
+  {
+    "testCaseId": "TC-0007",
+    "title": "Validate product details page opens when a product name is selected",
+    "variation": "Sauce Labs Fleece Jacket",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductName": "Sauce Labs Fleece Jacket"
+  },
+
+  {
+    "testCaseId": "TC-0007",
+    "title": "Validate product details page opens when a product name is selected",
+    "variation": "Sauce Labs Onesie",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductName": "Sauce Labs Onesie"
+  },
+
+  {
+    "testCaseId": "TC-0007",
+    "title": "Validate product details page opens when a product name is selected",
+    "variation": "Test.allTheThings() T-Shirt (Red)",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductName": "Test.allTheThings() T-Shirt (Red)"
+  },
+
+  {
+    "testCaseId": "TC-0008",
+    "title": "Validate product details page opens when a product image is selected",
+    "variation": "Sauce Labs Backpack",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductName": "Sauce Labs Backpack"
+  },
+
+
+  {
+    "testCaseId": "TC-0008",
+    "title": "Validate product details page opens when a product image is selected",
+    "variation": "Sauce Labs Bike Light",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductName": "Sauce Labs Bike Light"
+  },
+
+  {
+    "testCaseId": "TC-0008",
+    "title": "Validate product details page opens when a product image is selected",
+    "variation": "Sauce Labs Bolt T-Shirt",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductName": "Sauce Labs Bolt T-Shirt"
+  },
+
+  {
+    "testCaseId": "TC-0008",
+    "title": "Validate product details page opens when a product image is selected",
+    "variation": "Sauce Labs Fleece Jacket",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductName": "Sauce Labs Fleece Jacket"
+  },
+
+  {
+    "testCaseId": "TC-0008",
+    "title": "Validate product details page opens when a product image is selected",
+    "variation": "Sauce Labs Onesie",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductName": "Sauce Labs Onesie"
+  },
+
+  {
+    "testCaseId": "TC-0008",
+    "title": "Validate product details page opens when a product image is selected",
+    "variation": "Test.allTheThings() T-Shirt (Red)",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductName": "Test.allTheThings() T-Shirt (Red)"
+  },
+
+  {
+    "testCaseId": "TC-0009",
+    "title": "Validate product information matches on the product details page",
+    "variation": "Sauce Labs Backpack",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductName": "Sauce Labs Backpack"
+  },
+
+  {
+    "testCaseId": "TC-0009",
+    "title": "Validate product information matches on the product details page",
+    "variation": "Sauce Labs Bike Light",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductName": "Sauce Labs Bike Light"
+  },
+
+  {
+    "testCaseId": "TC-0009",
+    "title": "Validate product information matches on the product details page",
+    "variation": "Sauce Labs Bolt T-Shirt",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductName": "Sauce Labs Bolt T-Shirt"
+  },
+
+  {
+    "testCaseId": "TC-0009",
+    "title": "Validate product information matches on the product details page",
+    "variation": "Sauce Labs Fleece Jacket",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductName": "Sauce Labs Fleece Jacket"
+  },
+
+  {
+    "testCaseId": "TC-0009",
+    "title": "Validate product information matches on the product details page",
+    "variation": "Sauce Labs Onesie",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductName": "Sauce Labs Onesie"
+  },
+
+  {
+    "testCaseId": "TC-0009",
+    "title": "Validate product information matches on the product details page",
+    "variation": "Test.allTheThings() T-Shirt (Red)",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductName": "Test.allTheThings() T-Shirt (Red)"
+  },
+
+  {
+    "testCaseId": "TC-0010",
+    "title": "Validate product  page opens when back to products is click",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductName": "Sauce Labs Backpack",
+    "expectedUrl": "https://www.saucedemo.com/inventory.html"
+  },
+
+  {
+    "testCaseId": "TC-0011",
+    "title": "Validate product list contains no missing or duplicate products after repeated refresh",
+    "category": "EDGE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "productCount": 6
+  },
+
+  {
+    "testCaseId": "TC-0012",
+    "title": "Validate product list contains no missing or duplicate products after repeated sorting",
+    "category": "EDGE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "sorts": ["Name (A to Z)","Name (Z to A)","Price (low to high)","Price (high to low)"],
+    "productCount": 6
+  },
+
+  {
+    "testCaseId": "TC-0013",
+    "title": "Validate product page is inaccessible when user is logged out",
+    "category": "SECURITY",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedUrl": "https://www.saucedemo.com/inventory.html",
+    "expectedMessage": "Epic sadface: You can only access '/inventory.html' when you are logged in."
+  }
+
+
+
+]

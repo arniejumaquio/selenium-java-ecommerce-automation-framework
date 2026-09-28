@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!-- Full regression: run every test in these classes, including smoke tests. -->
+<suite name="SauceDemo Regression Suite" thread-count="8" parallel="methods">
+
+    <listeners>
+        <listener class-name="io.github.arniejumaquio.framework.listeners.TestListener"/>
+    </listeners>
+
+    <test name="All Regression Tests">
+        <classes>
+            <class name="io.github.arniejumaquio.tests.login.LoginTest"/>
+            <class name="io.github.arniejumaquio.tests.product.ProductTest"/>
+            <class name="io.github.arniejumaquio.tests.cart.CartTest"/>
+            <class name="io.github.arniejumaquio.tests.checkout.CheckoutTest"/>
+            <class name="io.github.arniejumaquio.tests.logout.LogoutTest"/>
+            <class name="io.github.arniejumaquio.tests.end_to_end.EndToEndTest"/>
+        </classes>
+    </test>
+
+</suite>

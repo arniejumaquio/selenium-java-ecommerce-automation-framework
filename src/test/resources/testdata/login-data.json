@@ -1,0 +1,415 @@
+[
+
+  {
+    "testCaseId": "TC-0001",
+    "title": "Validate successful login with valid credentials",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedUrl": "https://www.saucedemo.com/inventory.html"
+  },
+
+  {
+    "testCaseId": "TC-0002",
+    "title": "Validate successful login after failed login due to wrong credentials",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedMessage": "Epic sadface: Username and password do not match any user in this service",
+    "expectedUrl": "https://www.saucedemo.com/inventory.html"
+  },
+
+  {
+    "testCaseId": "TC-0003",
+    "title": "Validate username is required when username is blank",
+    "category": "NEGATIVE",
+    "username": "",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedMessage": "Epic sadface: Username is required",
+    "expectedUrl": "https://www.saucedemo.com/"
+  },
+
+  {
+    "testCaseId": "TC-0004",
+    "title": "Validate password is required when password is blank",
+    "category": "NEGATIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "",
+    "expectedMessage": "Epic sadface: Password is required",
+    "expectedUrl": "https://www.saucedemo.com/"
+  },
+  {
+    "testCaseId": "TC-0005",
+    "title": "Validate username is required  when both credentials are blank",
+    "category": "NEGATIVE",
+    "username": "",
+    "password": "",
+    "expectedMessage": "Epic sadface: Username is required",
+    "expectedUrl": "https://www.saucedemo.com/"
+  },
+
+  {
+    "testCaseId": "TC-0006",
+    "title": "Validate unsuccessful login with invalid credentials",
+    "variation": "invalid username",
+    "category": "NEGATIVE",
+    "username": "randomString!@#$%",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedMessage": "Epic sadface: Username and password do not match any user in this service",
+    "expectedUrl": "https://www.saucedemo.com/"
+  },
+  {
+    "testCaseId": "TC-0006",
+    "title": "Validate unsuccessful login with invalid credentials",
+    "variation": "invalid password",
+    "category": "NEGATIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "WrongPassword",
+    "expectedMessage": "Epic sadface: Username and password do not match any user in this service",
+    "expectedUrl": "https://www.saucedemo.com/"
+  },
+  {
+    "testCaseId": "TC-0006",
+    "title": "Validate unsuccessful login with invalid credentials",
+    "variation": "invalid username and invalid password",
+    "category": "NEGATIVE",
+    "username": "randomString!@#$%",
+    "password": "WrongPassword",
+    "expectedMessage": "Epic sadface: Username and password do not match any user in this service",
+    "expectedUrl": "https://www.saucedemo.com/"
+  },
+
+  {
+    "testCaseId": "TC-0007",
+    "title": "Validate unsuccessful login with a locked out user",
+    "category": "NEGATIVE",
+    "username": "locked_out_user",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedMessage": "Epic sadface: Sorry, this user has been locked out.",
+    "expectedUrl": "https://www.saucedemo.com/"
+  },
+
+  {
+    "testCaseId": "TC-0008",
+    "title": "Validate unsuccessful login with invalid letter casing",
+    "variation": "invalid letter casing username",
+    "category": "NEGATIVE",
+    "username": "Standard_User",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedMessage": "Epic sadface: Username and password do not match any user in this service",
+    "expectedUrl": "https://www.saucedemo.com/"
+  },
+
+  {
+    "testCaseId": "TC-0008",
+    "title": "Validate unsuccessful login with invalid letter casing",
+    "variation": "invalid letter casing password",
+    "category": "NEGATIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "Secret_Sauce",
+    "expectedMessage": "Epic sadface: Username and password do not match any user in this service",
+    "expectedUrl": "https://www.saucedemo.com/"
+  },
+
+  {
+    "testCaseId": "TC-0008",
+    "title": "Validate unsuccessful login with invalid letter casing",
+    "variation": "invalid letter casing username and password",
+    "category": "NEGATIVE",
+    "username": "Standard_User",
+    "password": "Secret_Sauce",
+    "expectedMessage": "Epic sadface: Username and password do not match any user in this service",
+    "expectedUrl": "https://www.saucedemo.com/"
+  },
+
+
+  {
+    "testCaseId": "TC-0009",
+    "title": "Validate unsuccessful login with leading/trailing spaces in credentials",
+    "variation": "leading spaces in username",
+    "category": "EDGE",
+    "username": "  standard_user",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedMessage": "Epic sadface: Username and password do not match any user in this service",
+    "expectedUrl": "https://www.saucedemo.com/"
+  },
+  {
+    "testCaseId": "TC-0009",
+    "title": "Validate unsuccessful login with leading/trailing spaces in credentials",
+    "variation": "trailing spaces in username",
+    "category": "EDGE",
+    "username": "standard_user    ",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedMessage": "Epic sadface: Username and password do not match any user in this service",
+    "expectedUrl": "https://www.saucedemo.com/"
+  },
+  {
+    "testCaseId": "TC-0009",
+    "title": "Validate unsuccessful login with leading/trailing spaces in credentials",
+    "variation": "leading  spaces  password",
+    "category": "EDGE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "    secret_sauce",
+    "expectedMessage": "Epic sadface: Username and password do not match any user in this service",
+    "expectedUrl": "https://www.saucedemo.com/"
+  },
+
+  {
+    "testCaseId": "TC-0009",
+    "title": "Validate unsuccessful login with leading/trailing spaces in credentials",
+    "variation": "trailing  spaces  password",
+    "category": "EDGE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "secret_sauce   ",
+    "expectedMessage": "Epic sadface: Username and password do not match any user in this service",
+    "expectedUrl": "https://www.saucedemo.com/"
+  },
+
+  {
+    "testCaseId": "TC-0009",
+    "title": "Validate unsuccessful login with leading/trailing spaces in credentials",
+    "variation": "leading and trailing  spaces username and  password",
+    "category": "EDGE",
+    "username": "     standard_user   ",
+    "password": "    secret_sauce    ",
+    "expectedMessage": "Epic sadface: Username and password do not match any user in this service",
+    "expectedUrl": "https://www.saucedemo.com/"
+  },
+
+  {
+    "testCaseId": "TC-0010",
+    "title": "Validate unsuccessful login with whitespaces only  credentials",
+    "variation": "whitespace only username",
+    "category": "EDGE",
+    "username": "        ",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedMessage": "Epic sadface: Username and password do not match any user in this service",
+    "expectedUrl": "https://www.saucedemo.com/"
+  },
+  {
+    "testCaseId": "TC-0010",
+    "title": "Validate unsuccessful login with whitespaces only  credentials",
+    "variation": "whitespace only password",
+    "category": "EDGE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "        ",
+    "expectedMessage": "Epic sadface: Username and password do not match any user in this service",
+    "expectedUrl": "https://www.saucedemo.com/"
+  },
+
+  {
+    "testCaseId": "TC-0010",
+    "title": "Validate unsuccessful login with whitespaces only  credentials",
+    "variation": "whitespace only username and password",
+    "category": "EDGE",
+    "username": "        ",
+    "password": "        ",
+    "expectedMessage": "Epic sadface: Username and password do not match any user in this service",
+    "expectedUrl": "https://www.saucedemo.com/"
+  },
+
+  {
+    "testCaseId": "TC-0011",
+    "title": "Validate login handling  with very long inputs",
+    "variation": "extremely long username",
+    "category": "EDGE",
+    "username": "1YHXZZNtr8gADvU2Tovbf9EDNKjJMSIqDc8mHOFeULzsY8tJE7G2iDweoQJq5dSRJDuWAC4PSgMPwN7hFRIIqWSDSBPAFgrlhCqfGjp3jNhU1lqmZeJM9fVXz95b4Mxj2qYgN6Olxwq6Sx2dOJ0vfltTtUUIhKBvyh7KbdMRpqiCDZRr3S9vkQpyjGaOwZ22D3w7yLp7rALv22MswU198kda0gNAYL4BPhUzAcV2vepL7kVSWYQBBnqcOleEwWBKxmA9ou21Fn5Kuzjob7lZuXfyYWp3vamiVGM3fsbsao1moYNStuJW68ITw529zlc63V64LUetu8xiPmY2L5fHUtpuF7B7eiwy4u0FnNlL9g0LfWo3D8g1D9uOcJAmKI4Mj7RO3lp8Fawo2CxvhaGIyydbbqK3nMyh4JxpOYQRMzPfC644mqpLmyEBlK6eSPlqzspSwwPH5ZWo2Nt87xipTnGddqDvTHGYMspe8e9IcbJras6RO7jwpW7GhL3GmDIp06tS1Cn7CSfkF8lqZhRuOGkyPKBuR5yxvRvDT4seH5reObbmpkO8R3gsYjjgOvlQQGuvfCdtxBLOo8tEnfImcT2Df6A8V7yDrO4T5rNgG1sKEm4HQZZpf47aAGe3gie9p0HIuuMIhjsyH4C62m469sVvU93fxfQS26RPH4q61Al2Jl9r67HfkmGuKz9BKD7vzg0jMP3vpADxrHFqyDN7i3XgxcdZCrjnyxk01Y8mVNRwcrFs9WzUCkyY4UthCnfRXm1hpmVzsuKjjlYdHrGanCtrsVNdX57slzZ1C0JOX7v2XkZj3OdzVgXeOIOd0uMOEtnuQDkysdiHMMrqU0cdiGK7etsC3JxTtqVNP4DVU9jgZFZDR19S2YcHwzVGOJ6W6IOfM5Z8d9riqwKYx1RAGinJbLtA2vLJ8kr7Cp6ZT1G9QKjRVr1nenVb5W1zTfvNeOegPRBkKdHtvzW7L7hbgWC5D0Uo0WEFOpps2Na7orntrEc2ttUdNhGoGXPEwTTi",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedMessage": "Epic sadface: Username and password do not match any user in this service",
+    "expectedUrl": "https://www.saucedemo.com/"
+  },
+
+  {
+    "testCaseId": "TC-0011",
+    "title": "Validate login handling  with very long inputs",
+    "variation": "extremely long password",
+    "category": "EDGE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "1YHXZZNtr8gADvU2Tovbf9EDNKjJMSIqDc8mHOFeULzsY8tJE7G2iDweoQJq5dSRJDuWAC4PSgMPwN7hFRIIqWSDSBPAFgrlhCqfGjp3jNhU1lqmZeJM9fVXz95b4Mxj2qYgN6Olxwq6Sx2dOJ0vfltTtUUIhKBvyh7KbdMRpqiCDZRr3S9vkQpyjGaOwZ22D3w7yLp7rALv22MswU198kda0gNAYL4BPhUzAcV2vepL7kVSWYQBBnqcOleEwWBKxmA9ou21Fn5Kuzjob7lZuXfyYWp3vamiVGM3fsbsao1moYNStuJW68ITw529zlc63V64LUetu8xiPmY2L5fHUtpuF7B7eiwy4u0FnNlL9g0LfWo3D8g1D9uOcJAmKI4Mj7RO3lp8Fawo2CxvhaGIyydbbqK3nMyh4JxpOYQRMzPfC644mqpLmyEBlK6eSPlqzspSwwPH5ZWo2Nt87xipTnGddqDvTHGYMspe8e9IcbJras6RO7jwpW7GhL3GmDIp06tS1Cn7CSfkF8lqZhRuOGkyPKBuR5yxvRvDT4seH5reObbmpkO8R3gsYjjgOvlQQGuvfCdtxBLOo8tEnfImcT2Df6A8V7yDrO4T5rNgG1sKEm4HQZZpf47aAGe3gie9p0HIuuMIhjsyH4C62m469sVvU93fxfQS26RPH4q61Al2Jl9r67HfkmGuKz9BKD7vzg0jMP3vpADxrHFqyDN7i3XgxcdZCrjnyxk01Y8mVNRwcrFs9WzUCkyY4UthCnfRXm1hpmVzsuKjjlYdHrGanCtrsVNdX57slzZ1C0JOX7v2XkZj3OdzVgXeOIOd0uMOEtnuQDkysdiHMMrqU0cdiGK7etsC3JxTtqVNP4DVU9jgZFZDR19S2YcHwzVGOJ6W6IOfM5Z8d9riqwKYx1RAGinJbLtA2vLJ8kr7Cp6ZT1G9QKjRVr1nenVb5W1zTfvNeOegPRBkKdHtvzW7L7hbgWC5D0Uo0WEFOpps2Na7orntrEc2ttUdNhGoGXPEwTTi",
+    "expectedMessage": "Epic sadface: Username and password do not match any user in this service",
+    "expectedUrl": "https://www.saucedemo.com/"
+  },
+
+  {
+    "testCaseId": "TC-0011",
+    "title": "Validate login handling  with very long inputs",
+    "variation": "extremely long username and password",
+    "category": "EDGE",
+    "username": "1YHXZZNtr8gADvU2Tovbf9EDNKjJMSIqDc8mHOFeULzsY8tJE7G2iDweoQJq5dSRJDuWAC4PSgMPwN7hFRIIqWSDSBPAFgrlhCqfGjp3jNhU1lqmZeJM9fVXz95b4Mxj2qYgN6Olxwq6Sx2dOJ0vfltTtUUIhKBvyh7KbdMRpqiCDZRr3S9vkQpyjGaOwZ22D3w7yLp7rALv22MswU198kda0gNAYL4BPhUzAcV2vepL7kVSWYQBBnqcOleEwWBKxmA9ou21Fn5Kuzjob7lZuXfyYWp3vamiVGM3fsbsao1moYNStuJW68ITw529zlc63V64LUetu8xiPmY2L5fHUtpuF7B7eiwy4u0FnNlL9g0LfWo3D8g1D9uOcJAmKI4Mj7RO3lp8Fawo2CxvhaGIyydbbqK3nMyh4JxpOYQRMzPfC644mqpLmyEBlK6eSPlqzspSwwPH5ZWo2Nt87xipTnGddqDvTHGYMspe8e9IcbJras6RO7jwpW7GhL3GmDIp06tS1Cn7CSfkF8lqZhRuOGkyPKBuR5yxvRvDT4seH5reObbmpkO8R3gsYjjgOvlQQGuvfCdtxBLOo8tEnfImcT2Df6A8V7yDrO4T5rNgG1sKEm4HQZZpf47aAGe3gie9p0HIuuMIhjsyH4C62m469sVvU93fxfQS26RPH4q61Al2Jl9r67HfkmGuKz9BKD7vzg0jMP3vpADxrHFqyDN7i3XgxcdZCrjnyxk01Y8mVNRwcrFs9WzUCkyY4UthCnfRXm1hpmVzsuKjjlYdHrGanCtrsVNdX57slzZ1C0JOX7v2XkZj3OdzVgXeOIOd0uMOEtnuQDkysdiHMMrqU0cdiGK7etsC3JxTtqVNP4DVU9jgZFZDR19S2YcHwzVGOJ6W6IOfM5Z8d9riqwKYx1RAGinJbLtA2vLJ8kr7Cp6ZT1G9QKjRVr1nenVb5W1zTfvNeOegPRBkKdHtvzW7L7hbgWC5D0Uo0WEFOpps2Na7orntrEc2ttUdNhGoGXPEwTTi",
+    "password": "1YHXZZNtr8gADvU2Tovbf9EDNKjJMSIqDc8mHOFeULzsY8tJE7G2iDweoQJq5dSRJDuWAC4PSgMPwN7hFRIIqWSDSBPAFgrlhCqfGjp3jNhU1lqmZeJM9fVXz95b4Mxj2qYgN6Olxwq6Sx2dOJ0vfltTtUUIhKBvyh7KbdMRpqiCDZRr3S9vkQpyjGaOwZ22D3w7yLp7rALv22MswU198kda0gNAYL4BPhUzAcV2vepL7kVSWYQBBnqcOleEwWBKxmA9ou21Fn5Kuzjob7lZuXfyYWp3vamiVGM3fsbsao1moYNStuJW68ITw529zlc63V64LUetu8xiPmY2L5fHUtpuF7B7eiwy4u0FnNlL9g0LfWo3D8g1D9uOcJAmKI4Mj7RO3lp8Fawo2CxvhaGIyydbbqK3nMyh4JxpOYQRMzPfC644mqpLmyEBlK6eSPlqzspSwwPH5ZWo2Nt87xipTnGddqDvTHGYMspe8e9IcbJras6RO7jwpW7GhL3GmDIp06tS1Cn7CSfkF8lqZhRuOGkyPKBuR5yxvRvDT4seH5reObbmpkO8R3gsYjjgOvlQQGuvfCdtxBLOo8tEnfImcT2Df6A8V7yDrO4T5rNgG1sKEm4HQZZpf47aAGe3gie9p0HIuuMIhjsyH4C62m469sVvU93fxfQS26RPH4q61Al2Jl9r67HfkmGuKz9BKD7vzg0jMP3vpADxrHFqyDN7i3XgxcdZCrjnyxk01Y8mVNRwcrFs9WzUCkyY4UthCnfRXm1hpmVzsuKjjlYdHrGanCtrsVNdX57slzZ1C0JOX7v2XkZj3OdzVgXeOIOd0uMOEtnuQDkysdiHMMrqU0cdiGK7etsC3JxTtqVNP4DVU9jgZFZDR19S2YcHwzVGOJ6W6IOfM5Z8d9riqwKYx1RAGinJbLtA2vLJ8kr7Cp6ZT1G9QKjRVr1nenVb5W1zTfvNeOegPRBkKdHtvzW7L7hbgWC5D0Uo0WEFOpps2Na7orntrEc2ttUdNhGoGXPEwTTi",
+    "expectedMessage": "Epic sadface: Username and password do not match any user in this service",
+    "expectedUrl": "https://www.saucedemo.com/"
+  },
+
+  {
+    "testCaseId": "TC-0012",
+    "title": "Validate repeated invalid login do not duplicate the error banner",
+    "category": "EDGE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "Wr0ngPassword",
+    "expectedMessage": "Epic sadface: Username and password do not match any user in this service",
+    "expectedUrl": "https://www.saucedemo.com/"
+  },
+
+  {
+    "testCaseId": "TC-0013",
+    "title": "Validate  repeated clicking the login button multiple times triggers only one login session",
+    "category": "EDGE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedUrl": "https://www.saucedemo.com/inventory.html"
+  },
+
+  {
+    "testCaseId": "TC-0014",
+    "title": "Validate login session remains active after product page refresh",
+    "category": "EDGE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedUrl": "https://www.saucedemo.com/inventory.html"
+  },
+
+  {
+    "testCaseId": "TC-0015",
+    "title": "Validate login handling  with unicode  inputs",
+    "variation": "unicode in username",
+    "category": "EDGE",
+    "username": "标准用户",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedMessage": "Epic sadface: Username and password do not match any user in this service",
+    "expectedUrl": "https://www.saucedemo.com/"
+  },
+
+
+  {
+    "testCaseId": "TC-0015",
+    "title": "Validate login handling  with unicode  inputs",
+    "variation": "unicode in password",
+    "category": "EDGE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "secret_sauce\uD83D\uDE00",
+    "expectedMessage": "Epic sadface: Username and password do not match any user in this service",
+    "expectedUrl": "https://www.saucedemo.com/"
+  },
+
+
+  {
+    "testCaseId": "TC-0015",
+    "title": "Validate login handling  with unicode  inputs",
+    "variation": "unicode in username and password",
+    "category": "EDGE",
+    "username": "标准用户",
+    "password": "secret_sauce\uD83D\uDE00",
+    "expectedMessage": "Epic sadface: Username and password do not match any user in this service",
+    "expectedUrl": "https://www.saucedemo.com/"
+  },
+
+
+  {
+    "testCaseId": "TC-0016",
+    "title": "Validate login page is accessible using a secure URL",
+    "category": "SECURITY",
+    "expectedUrl": "https://www.saucedemo.com/"
+  },
+
+  {
+    "testCaseId": "TC-0017",
+    "title": "Validate SQL injection payloads cannot bypass login",
+    "variation": "SQL injection in username",
+    "category": "SECURITY",
+    "username": "' OR '1'='1",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedMessage": "Epic sadface: Username and password do not match any user in this service",
+    "expectedUrl": "https://www.saucedemo.com/"
+  },
+
+  {
+    "testCaseId": "TC-0017",
+    "title": "Validate SQL injection payloads cannot bypass login",
+    "variation": "SQL injection in password",
+    "category": "SECURITY",
+    "username": "${SAUCE_USERNAME}",
+    "password": "' OR '1'='1",
+    "expectedMessage": "Epic sadface: Username and password do not match any user in this service",
+    "expectedUrl": "https://www.saucedemo.com/"
+  },
+
+  {
+    "testCaseId": "TC-0017",
+    "title": "Validate SQL injection payloads cannot bypass login",
+    "variation": "SQL injection in username and password",
+    "category": "SECURITY",
+    "username": "' OR '1'='1",
+    "password": "' OR '1'='1",
+    "expectedMessage": "Epic sadface: Username and password do not match any user in this service",
+    "expectedUrl": "https://www.saucedemo.com/"
+  },
+
+  {
+    "testCaseId": "TC-0018",
+    "title": "Validate XSS script injection payloads cannot execute through login inputs",
+    "variation": "XSS script injection in username",
+    "category": "SECURITY",
+    "username": "<script>alert(1)</script>",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedMessage": "Epic sadface: Username and password do not match any user in this service",
+    "expectedUrl": "https://www.saucedemo.com/"
+  },
+
+  {
+    "testCaseId": "TC-0018",
+    "title": "Validate XSS script injection payloads cannot execute through login inputs",
+    "variation": "XSS script injection in password",
+    "category": "SECURITY",
+    "username": "${SAUCE_USERNAME}",
+    "password": "<script>alert(1)</script>",
+    "expectedMessage": "Epic sadface: Username and password do not match any user in this service",
+    "expectedUrl": "https://www.saucedemo.com/"
+  },
+
+  {
+    "testCaseId": "TC-0018",
+    "title": "Validate XSS script injection payloads cannot execute through login inputs",
+    "variation": "XSS script injection in username and password",
+    "category": "SECURITY",
+    "username": "<script>alert(1)</script>",
+    "password": "<script>alert(1)</script>",
+    "expectedMessage": "Epic sadface: Username and password do not match any user in this service",
+    "expectedUrl": "https://www.saucedemo.com/"
+  },
+
+  {
+    "testCaseId": "TC-0019",
+    "title": "Validate login input are not exposed in the browser URL after submission",
+    "variation": "valid credentials",
+    "category": "SECURITY",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedMessage": "Epic sadface: Username and password do not match any user in this service",
+    "expectedUrl": "https://www.saucedemo.com/"
+  },
+
+  {
+    "testCaseId": "TC-0019",
+    "title": "Validate login input are not exposed in the browser URL after submission",
+    "variation": "invalid credentials",
+    "category": "SECURITY",
+    "username": "randomString!@#$%",
+    "password": "WrongPassword",
+    "expectedMessage": "Epic sadface: Username and password do not match any user in this service",
+    "expectedUrl": "https://www.saucedemo.com/"
+  },
+
+  {
+    "testCaseId": "TC-0020",
+    "title": "Validate password  are not exposed in the login error message",
+    "variation": "invalid credentials",
+    "category": "SECURITY",
+    "username": "${SAUCE_USERNAME}",
+    "password": "WrongPassword",
+    "expectedMessage": "Epic sadface: Username and password do not match any user in this service",
+    "expectedUrl": "https://www.saucedemo.com/"
+  }
+
+
+]

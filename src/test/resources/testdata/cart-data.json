@@ -1,0 +1,346 @@
+[
+
+  {
+    "testCaseId": "TC-0001",
+    "title": "Validate product can be added from cart",
+    "variation": "one product",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Sauce Labs Backpack"]
+  },
+
+  {
+    "testCaseId": "TC-0001",
+    "title": "Validate product can be added from cart",
+    "variation": "two product",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Sauce Labs Backpack","Sauce Labs Bike Light"]
+  },
+
+  {
+    "testCaseId": "TC-0001",
+    "title": "Validate product can be added from cart",
+    "variation": "five product",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Sauce Labs Backpack","Sauce Labs Bike Light","Sauce Labs Bolt T-Shirt","Sauce Labs Fleece Jacket","Sauce Labs Onesie"]
+  },
+
+  {
+    "testCaseId": "TC-0001",
+    "title": "Validate product can be added from cart",
+    "variation": "all product",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Sauce Labs Backpack","Sauce Labs Bike Light","Sauce Labs Bolt T-Shirt","Sauce Labs Fleece Jacket","Sauce Labs Onesie","Test.allTheThings() T-Shirt (Red)"]
+  },
+
+  {
+    "testCaseId": "TC-0002",
+    "title": "Validate  product can be removed from Cart",
+    "variation": "one product",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Sauce Labs Backpack"]
+  },
+
+  {
+    "testCaseId": "TC-0002",
+    "title": "Validate  product can be removed from Cart",
+    "variation": "two product",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Sauce Labs Backpack","Sauce Labs Bike Light"]
+  },
+
+  {
+    "testCaseId": "TC-0002",
+    "title": "Validate  product can be removed from Cart",
+    "variation": "five product",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Sauce Labs Backpack","Sauce Labs Bike Light","Sauce Labs Bolt T-Shirt","Sauce Labs Fleece Jacket","Sauce Labs Onesie"]
+  },
+
+
+  {
+    "testCaseId": "TC-0002",
+    "title": "Validate  product can be removed from Cart",
+    "variation": "all product",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Sauce Labs Backpack","Sauce Labs Bike Light","Sauce Labs Bolt T-Shirt","Sauce Labs Fleece Jacket","Sauce Labs Onesie","Test.allTheThings() T-Shirt (Red)"]
+  },
+
+  {
+    "testCaseId": "TC-0003",
+    "title": "Validate each Cart item displays correct product information",
+    "variation": "Sauce Labs Backpack",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Sauce Labs Backpack"],
+    "expectedProductDescriptions": ["carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection."],
+    "expectedPrices": ["$29.99"]
+  },
+
+  {
+    "testCaseId": "TC-0003",
+    "title": "Validate each Cart item displays correct product information",
+    "variation": "Test.allTheThings() T-Shirt (Red)",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Test.allTheThings() T-Shirt (Red)"],
+    "expectedProductDescriptions": ["This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton."],
+    "expectedPrices": ["$15.99"]
+  },
+
+  {
+    "testCaseId": "TC-0004",
+    "title": "Validate cart badge increments when a product is added",
+    "variation": "one product",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Sauce Labs Backpack"]
+  },
+
+  {
+    "testCaseId": "TC-0004",
+    "title": "Validate cart badge increments when a product is added",
+    "variation": "two product",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Sauce Labs Backpack","Sauce Labs Bike Light"]
+  },
+
+  {
+    "testCaseId": "TC-0004",
+    "title": "Validate cart badge increments when a product is added",
+    "variation": "five product",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Sauce Labs Backpack","Sauce Labs Bike Light","Sauce Labs Bolt T-Shirt","Sauce Labs Fleece Jacket","Sauce Labs Onesie"]
+  },
+
+  {
+    "testCaseId": "TC-0004",
+    "title": "Validate cart badge increments when a product is added",
+    "variation": "all product",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Sauce Labs Backpack","Sauce Labs Bike Light","Sauce Labs Bolt T-Shirt","Sauce Labs Fleece Jacket","Sauce Labs Onesie","Test.allTheThings() T-Shirt (Red)"]
+  },
+
+  {
+    "testCaseId": "TC-0005",
+    "title": "Validate cart badge decrements when a product is removed",
+    "variation": "one product",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Sauce Labs Backpack"]
+  },
+
+  {
+    "testCaseId": "TC-0005",
+    "title": "Validate cart badge decrements when a product is removed",
+    "variation": "two product",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Sauce Labs Backpack","Sauce Labs Bike Light"]
+  },
+
+  {
+    "testCaseId": "TC-0005",
+    "title": "Validate cart badge decrements when a product is removed",
+    "variation": "five product",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Sauce Labs Backpack","Sauce Labs Bike Light","Sauce Labs Bolt T-Shirt","Sauce Labs Fleece Jacket","Sauce Labs Onesie"]
+  },
+
+  {
+    "testCaseId": "TC-0005",
+    "title": "Validate cart badge decrements when a product is removed",
+    "variation": "all product",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Sauce Labs Backpack","Sauce Labs Bike Light","Sauce Labs Bolt T-Shirt","Sauce Labs Fleece Jacket","Sauce Labs Onesie","Test.allTheThings() T-Shirt (Red)"]
+  },
+
+  {
+    "testCaseId": "TC-0006",
+    "title": "Validate a cart product name opens the corresponding product details page",
+    "variation": "Sauce Labs Backpack",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Sauce Labs Backpack"]
+  },
+
+  {
+    "testCaseId": "TC-0006",
+    "title": "Validate a cart product name opens the corresponding product details page",
+    "variation": "Sauce Labs Bike Light",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Sauce Labs Bike Light"]
+  },
+
+  {
+    "testCaseId": "TC-0006",
+    "title": "Validate a cart product name opens the corresponding product details page",
+    "variation": "Sauce Labs Bolt T-Shirt",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Sauce Labs Bolt T-Shirt"]
+  },
+
+  {
+    "testCaseId": "TC-0007",
+    "title": "Validate continue shopping button navigate the user to the products page",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Sauce Labs Backpack"],
+    "expectedUrl": "https://www.saucedemo.com/inventory.html"
+
+  },
+
+  {
+    "testCaseId": "TC-0008",
+    "title": "Validate checkout button navigate the user to the checkout page",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Sauce Labs Backpack"],
+    "expectedUrl": "https://www.saucedemo.com/checkout-step-one.html"
+
+  },
+
+  {
+    "testCaseId": "TC-0009",
+    "title": "Validate removing one product does not remove other cart products",
+    "variation": "first product",
+    "category": "NEGATIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Sauce Labs Backpack","Sauce Labs Bike Light","Sauce Labs Bolt T-Shirt","Sauce Labs Fleece Jacket","Sauce Labs Onesie","Test.allTheThings() T-Shirt (Red)"],
+    "productToRemove": "Sauce Labs Backpack"
+
+  },
+
+  {
+    "testCaseId": "TC-0009",
+    "title": "Validate removing one product does not remove other cart products",
+    "variation": "third product",
+    "category": "NEGATIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Sauce Labs Backpack","Sauce Labs Bike Light","Sauce Labs Bolt T-Shirt","Sauce Labs Fleece Jacket","Sauce Labs Onesie","Test.allTheThings() T-Shirt (Red)"],
+    "productToRemove": "Sauce Labs Bolt T-Shirt"
+
+  },
+
+  {
+    "testCaseId": "TC-0009",
+    "title": "Validate removing one product does not remove other cart products",
+    "variation": "last product",
+    "category": "NEGATIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Sauce Labs Backpack","Sauce Labs Bike Light","Sauce Labs Bolt T-Shirt","Sauce Labs Fleece Jacket","Sauce Labs Onesie","Test.allTheThings() T-Shirt (Red)"],
+    "productToRemove": "Test.allTheThings() T-Shirt (Red)"
+
+  },
+
+  {
+    "testCaseId": "TC-0010",
+    "title": "Validate cart displays the  empty state when no products are added to cart",
+    "category": "EDGE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}"
+  },
+
+  {
+    "testCaseId": "TC-0011",
+    "title": "Validate cart state persist after repeated refresh",
+    "category": "EDGE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Sauce Labs Backpack","Sauce Labs Bike Light","Sauce Labs Bolt T-Shirt","Sauce Labs Fleece Jacket","Sauce Labs Onesie","Test.allTheThings() T-Shirt (Red)"]
+  },
+
+  {
+    "testCaseId": "TC-0011",
+    "title": "Validate cart state persist after repeated browser back and forward navigation",
+    "category": "EDGE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Sauce Labs Backpack","Sauce Labs Bike Light","Sauce Labs Bolt T-Shirt","Sauce Labs Fleece Jacket","Sauce Labs Onesie","Test.allTheThings() T-Shirt (Red)"]
+  },
+
+  {
+    "testCaseId": "TC-0012",
+    "title": "Validate cart state persist after repeated continue shopping and checkout navigation",
+    "category": "EDGE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Sauce Labs Backpack","Sauce Labs Bike Light","Sauce Labs Bolt T-Shirt","Sauce Labs Fleece Jacket","Sauce Labs Onesie","Test.allTheThings() T-Shirt (Red)"]
+  },
+
+  {
+    "testCaseId": "TC-0013",
+    "title": "Validate cart state persist after repeated clicking of remove button",
+    "category": "EDGE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Sauce Labs Backpack","Sauce Labs Bike Light","Sauce Labs Bolt T-Shirt","Sauce Labs Fleece Jacket","Sauce Labs Onesie","Test.allTheThings() T-Shirt (Red)"],
+    "productToRemove": "Sauce Labs Backpack"
+  },
+
+
+  {
+    "testCaseId": "TC-0014",
+    "title": "Validate cart page is inaccessible when user is logged out",
+    "category": "SECURITY",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Sauce Labs Backpack","Sauce Labs Bike Light","Sauce Labs Bolt T-Shirt","Sauce Labs Fleece Jacket","Sauce Labs Onesie","Test.allTheThings() T-Shirt (Red)"],
+    "expectedMessage": "Epic sadface: You can only access '/cart.html' when you are logged in.",
+    "expectedUrl": "https://www.saucedemo.com/cart.html"
+
+  },
+
+  {
+    "testCaseId": "TC-0015",
+    "title": "Validate cart page is inaccessible when user is logged out and click back browser button",
+    "category": "SECURITY",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Sauce Labs Backpack","Sauce Labs Bike Light","Sauce Labs Bolt T-Shirt","Sauce Labs Fleece Jacket","Sauce Labs Onesie","Test.allTheThings() T-Shirt (Red)"],
+    "expectedMessage": "Epic sadface: You can only access '/cart.html' when you are logged in.",
+    "expectedUrl": "https://www.saucedemo.com/cart.html"
+  }
+
+
+]

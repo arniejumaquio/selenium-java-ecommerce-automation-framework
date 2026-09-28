@@ -1,0 +1,24 @@
+services:
+  selenium-hub:
+    image: selenium/hub:4.48.0-20260905
+    ports:
+      - "4445:4444"
+
+  chrome-node:
+    image: selenium/node-chrome:4.48.0-20260905
+    shm_size: "2gb"
+    environment:
+      SE_EVENT_BUS_HOST: selenium-hub
+      SE_EVENT_BUS_PUBLISH_PORT: "4442"
+      SE_EVENT_BUS_SUBSCRIBE_PORT: "4443"
+      SE_NODE_MAX_SESSIONS: "8"
+
+  firefox-node:
+    image: selenium/node-firefox:4.48.0-20260905
+    shm_size: "2gb"
+    environment:
+      SE_EVENT_BUS_HOST: selenium-hub
+      SE_EVENT_BUS_PUBLISH_PORT: "4442"
+      SE_EVENT_BUS_SUBSCRIBE_PORT: "4443"
+      SE_NODE_MAX_SESSIONS: "8"
+

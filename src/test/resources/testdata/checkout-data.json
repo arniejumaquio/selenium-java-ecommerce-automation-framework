@@ -1,0 +1,213 @@
+[
+
+  {
+    "testCaseId": "TC-0001",
+    "title": "Validate continue button navigate the user to the checkout overview page",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Sauce Labs Backpack"],
+    "expectedUrl": "https://www.saucedemo.com/checkout-step-two.html",
+    "firstName": "Test",
+    "lastName": "Test",
+    "zipPostalCode": "1234"
+  },
+
+  {
+    "testCaseId": "TC-0002",
+    "title": "Validate cancel button navigate the user to the cart page",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Sauce Labs Backpack"],
+    "expectedUrl": "https://www.saucedemo.com/cart.html"
+  },
+
+
+  {
+    "testCaseId": "TC-0003",
+    "title": "Validate selected cart products match checkout overview",
+    "variation": "one product",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Sauce Labs Backpack"],
+    "firstName": "Test",
+    "lastName": "Test",
+    "zipPostalCode": "1234"
+  },
+
+  {
+    "testCaseId": "TC-0003",
+    "title": "Validate selected cart products match checkout overview",
+    "variation": "all product",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Sauce Labs Backpack","Sauce Labs Bike Light","Sauce Labs Bolt T-Shirt","Sauce Labs Fleece Jacket","Sauce Labs Onesie","Test.allTheThings() T-Shirt (Red)"],
+    "firstName": "Test",
+    "lastName": "Test",
+    "zipPostalCode": "1234"
+  },
+
+  {
+    "testCaseId": "TC-0004",
+    "title": "Validate each checkout overview item displays correct product information",
+    "variation": "Sauce Labs Backpack",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Sauce Labs Backpack"],
+    "expectedProductDescriptions": ["carry.allTheThings() with the sleek, streamlined Sly Pack that melds uncompromising style with unequaled laptop and tablet protection."],
+    "expectedPrices": ["$29.99"],
+    "firstName": "Test",
+    "lastName": "Test",
+    "zipPostalCode": "1234"
+  },
+
+  {
+    "testCaseId": "TC-0004",
+    "title": "Validate each checkout overview item displays correct product information",
+    "variation": "Test.allTheThings() T-Shirt (Red)",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Test.allTheThings() T-Shirt (Red)"],
+    "expectedProductDescriptions": ["This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton."],
+    "expectedPrices": ["$15.99"],
+    "firstName": "Test",
+    "lastName": "Test",
+    "zipPostalCode": "1234"
+  },
+
+  {
+    "testCaseId": "TC-0005",
+    "title": "Validate checkout overview displays the correct payment and shipping information",
+    "variation": "Test.allTheThings() T-Shirt (Red)",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Test.allTheThings() T-Shirt (Red)"],
+    "expectedProductDescriptions": ["This classic Sauce Labs t-shirt is perfect to wear when cozying up to your keyboard to automate a few tests. Super-soft and comfy ringspun combed cotton."],
+    "expectedPrices": ["$15.99"],
+    "firstName": "Test",
+    "lastName": "Test",
+    "zipPostalCode": "1234",
+    "expectedPaymentInformation": "SauceCard #31337",
+    "expectedShippingInformation": "Free Pony Express Delivery!"
+  },
+
+  {
+    "testCaseId": "TC-0006",
+    "title": "Validate checkout overview price summary is calculated correctly",
+    "variation": "one product",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Sauce Labs Backpack"],
+    "expectedPrices": ["$29.99"],
+    "firstName": "Test",
+    "lastName": "Test",
+    "zipPostalCode": "1234"
+  },
+
+  {
+    "testCaseId": "TC-0006",
+    "title": "Validate checkout overview price summary is calculated correctly",
+    "variation": "two product",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Sauce Labs Backpack","Sauce Labs Bike Light"],
+    "expectedPrices": ["$29.99","$9.99"],
+    "firstName": "Test",
+    "lastName": "Test",
+    "zipPostalCode": "1234"
+  },
+
+  {
+    "testCaseId": "TC-0006",
+    "title": "Validate checkout overview price summary is calculated correctly",
+    "variation": "five product",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Sauce Labs Backpack","Sauce Labs Bike Light","Sauce Labs Bolt T-Shirt","Sauce Labs Fleece Jacket","Sauce Labs Onesie"],
+    "expectedPrices": ["$29.99","$9.99","$15.99","$49.99","$7.99"],
+    "firstName": "Test",
+    "lastName": "Test",
+    "zipPostalCode": "1234"
+  },
+
+  {
+    "testCaseId": "TC-0006",
+    "title": "Validate checkout overview price summary is calculated correctly",
+    "variation": "all product",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Sauce Labs Backpack","Sauce Labs Bike Light","Sauce Labs Bolt T-Shirt","Sauce Labs Fleece Jacket","Sauce Labs Onesie","Test.allTheThings() T-Shirt (Red)"],
+    "expectedPrices": ["$29.99","$9.99","$15.99","$49.99","$7.99","$15.99"],
+    "firstName": "Test",
+    "lastName": "Test",
+    "zipPostalCode": "1234"
+  },
+
+  {
+    "testCaseId": "TC-0007",
+    "title": "Validate cancel button on checkout overview navigate the user to the product page",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Sauce Labs Backpack","Sauce Labs Bike Light","Sauce Labs Bolt T-Shirt","Sauce Labs Fleece Jacket","Sauce Labs Onesie","Test.allTheThings() T-Shirt (Red)"],
+    "expectedUrl": "https://www.saucedemo.com/inventory.html",
+    "firstName": "Test",
+    "lastName": "Test",
+    "zipPostalCode": "1234"
+
+  },
+
+  {
+    "testCaseId": "TC-0008",
+    "title": "Validate finish button on checkout overview navigate the user to the checkout complete page",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Sauce Labs Backpack","Sauce Labs Bike Light","Sauce Labs Bolt T-Shirt","Sauce Labs Fleece Jacket","Sauce Labs Onesie","Test.allTheThings() T-Shirt (Red)"],
+    "expectedUrl": "https://www.saucedemo.com/checkout-complete.html",
+    "firstName": "Test",
+    "lastName": "Test",
+    "zipPostalCode": "1234"
+
+  },
+
+  {
+    "testCaseId": "TC-0009",
+    "title": "Validate checkout complete  displays correct order confirmation",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Sauce Labs Backpack","Sauce Labs Bike Light","Sauce Labs Bolt T-Shirt","Sauce Labs Fleece Jacket","Sauce Labs Onesie","Test.allTheThings() T-Shirt (Red)"],
+    "expectedMessages": ["Thank you for your order!","Your order has been dispatched, and will arrive just as fast as the pony can get there!"],
+    "firstName": "Test",
+    "lastName": "Test",
+    "zipPostalCode": "1234"
+
+  },
+
+  {
+    "testCaseId": "TC-0010",
+    "title": "Validate back home button on checkout complete navigate the user to the product page",
+    "category": "POSITIVE",
+    "username": "${SAUCE_USERNAME}",
+    "password": "${SAUCE_PASSWORD}",
+    "expectedProductNames": ["Sauce Labs Backpack","Sauce Labs Bike Light","Sauce Labs Bolt T-Shirt","Sauce Labs Fleece Jacket","Sauce Labs Onesie","Test.allTheThings() T-Shirt (Red)"],
+    "expectedUrl": "https://www.saucedemo.com/inventory.html",
+    "firstName": "Test",
+    "lastName": "Test",
+    "zipPostalCode": "1234"
+
+  }
+
+
+]
