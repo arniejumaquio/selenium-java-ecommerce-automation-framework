@@ -145,22 +145,27 @@ Two Jenkins jobs use the same root [Jenkinsfile](Jenkinsfile), loaded through **
 The triggers are configured in Jenkins and determine when each job starts. The shared Jenkinsfile controls what happens after it starts, using `env.JOB_BASE_NAME` to select the Maven profile. Other job names cause the pipeline to fail.
 
 ```text
-GitHub push ------> SauceDemo-Smoke ------> Smoke profile
-Nightly schedule -> SauceDemo-Regression -> Regression profile
-                          |
-                   Shared Jenkinsfile
-                          |
-                   Checkout repository
-                          |
-                   Start Docker Grid
-                          |
-                   Inject credentials
-                          |
-                   Run selected tests
-                          |
-                   Publish Allure report
-                          |
-                   Shut down Docker Grid
+GitHub push ------> SauceDemo-Smoke --------\
+                                              \
+                                               > Shared Jenkinsfile
+                                              /
+Nightly schedule -> SauceDemo-Regression ----/
+                         |
+                  JOB_BASE_NAME
+                         |
+             Smoke or Regression profile
+                         |
+                Checkout repository
+                         |
+                Start Docker Grid
+                         |
+               Inject credentials
+                         |
+                 Run tests
+                         |
+              Publish Allure report
+                         |
+               Stop Docker Grid
 ```
 
 ### Pipeline steps
