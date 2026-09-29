@@ -35,6 +35,7 @@ src/test/resources/
 smoke.xml
 regression.xml
 docker-compose.yml
+Jenkinsfile
 pom.xml
 ```
 
@@ -60,7 +61,7 @@ Configuration precedence is Java system properties, then environment variables, 
 | `headless` | `true` |
 | `execution` | `local` |
 | `grid.url` | `http://localhost:4445/` |
-| `page.load.timeout` | `30` seconds |
+| `page.load.timeout` | `15` seconds |
 | `explicit.wait.timeout` | `15` seconds |
 
 Before running tests, set valid SauceDemo credentials in the environment that launches Maven or in your IDE run configuration. Replace these example values:
@@ -130,4 +131,64 @@ allure serve target/allure-results
 
 Use `mvn clean test ...` for fresh results; `clean` removes previous outputs under `target`. `allure serve` displays existing results and does not run tests. The execution log is overwritten on each run.
 
-No CI/CD pipeline is configured in this repository.
+## Jenkins CI
+
+Two Jenkins jobs use the same root [Jenkinsfile](Jenkinsfile), loaded through **Pipeline script from SCM**. This project demonstrates continuous integration: running automated tests and publishing results. It does not deploy the application.
+
+### Jobs and triggers
+
+| Job | Trigger | Maven profile | Test suite |
+| --- | --- | --- | --- |
+| `SauceDemo-Smoke` | GitHub push | `Smoke` | Tests in the `smoke` group |
+| `SauceDemo-Regression` | Nightly Jenkins schedule | `Regression` | All tests in the configured classes, including Smoke |
+
+The triggers are configured in Jenkins and determine when each job starts. The shared Jenkinsfile controls what happens after it starts, using `env.JOB_BASE_NAME` to select the Maven profile. Other job names cause the pipeline to fail.
+
+```text
+GitHub push ------> SauceDemo-Smoke ------> Smoke profile
+Nightly schedule -> SauceDemo-Regression -> Regression profile
+                          |
+                   Shared Jenkinsfile
+                          |
+                   Checkout repository
+                          |
+                   Start Docker Grid
+                          |
+                   Inject credentials
+                          |
+                   Run selected tests
+                          |
+                   Publish Allure report
+                          |
+                   Shut down Docker Grid
+```
+
+### Pipeline steps
+
+1. `checkout scm` checks out the automation repository using the job's SCM configuration.
+2. `docker compose up -d --wait` starts the Selenium Hub and browser nodes.
+3. Jenkins binds the `saucedemo-login` credential to `SAUCE_USERNAME` and `SAUCE_PASSWORD` for the Maven step.
+4. Maven runs the selected suite using remote, headless Chrome:
+
+   ```bash
+   # SauceDemo-Smoke
+   mvn clean test -PSmoke -Dexecution=remote -Dbrowser=chrome -Dheadless=true
+
+   # SauceDemo-Regression
+   mvn clean test -PRegression -Dexecution=remote -Dbrowser=chrome -Dheadless=true
+   ```
+
+5. Tests write raw Allure results to `target/allure-results`. Jenkins publishes the report in `post { always { ... } }`, including after test failures.
+6. `post { cleanup { ... } }` runs `docker compose down`, including if report publication fails.
+
+Maven and the Java tests run on the Jenkins agent. Browser sessions run in Docker through Selenium Grid.
+
+### Jenkins configuration
+
+- Both jobs use **Pipeline script from SCM**, with the script path set to `Jenkinsfile`.
+- Jenkins Tools provides Maven and the JDK through installations named `Maven-3.9.9` and `JDK-21`. The project targets Java 17.
+- Docker with Compose must be available on the Jenkins agent, with access to the Docker daemon. The current Grid address is `http://localhost:4445/`.
+- SauceDemo secrets are stored in Jenkins Credentials Store and are not committed to Git. The Jenkinsfile contains only the credential ID and environment variable names.
+- The Jenkins Allure plugin and its command-line tool must be configured to publish reports.
+
+Both jobs use host port `4445`, so they must not overlap on the same Docker host. `disableConcurrentBuilds()` prevents overlapping builds of one job; it does not prevent Smoke and Regression from running together.
