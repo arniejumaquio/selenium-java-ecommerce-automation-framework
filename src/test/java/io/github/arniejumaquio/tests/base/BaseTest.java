@@ -26,11 +26,7 @@ public abstract class BaseTest {
 
         WebDriver driver = DriverFactory.createDriver(browser, headless, execution, gridUrl);
         DriverManager.setDriver(driver);
-        // Chrome uses its configured startup size in remote and headless runs.
-        if (!(browser.equalsIgnoreCase("chrome")
-                && (headless || execution.equalsIgnoreCase("remote")))) {
-            driver.manage().window().maximize();
-        }
+        driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(ConfigReader.getInt("page.load.timeout")));
 
 
